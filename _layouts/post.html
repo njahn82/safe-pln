@@ -3,8 +3,19 @@ layout: default
 ---
 <header>
   <h1 class="header-small">
-    <a href="{{ site.baseurl }}">{{ site.name }}</a>
+    <a href="{{ site.url }}">
+    <img src="/safe-logo.png" alt="SAFE-PLN"></a>
   </h1>
+  <nav class="header-nav">
+    {% for nav in site.nav %}
+    {% if nav.url contains 'http://' or nav.url contains 'https://' %}
+    <a href="{{ nav.url }}">{{ nav.name }}</a>
+    {% else %}
+    <a href="{{ nav.url | prepend: site.baseurl }}">{{ nav.name }}</a>
+    {% endif %}
+    {% endfor %}
+  </nav>
+  <hr>
 </header>
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
@@ -32,12 +43,12 @@ layout: default
   <div class="post-share">
     <hr>
     {% include share.html %}
-    <hr>
   </div>
   {% endif %}
 
   <!-- Disqus -->
   {% if page.comments != false and site.disqus.id %}
+    <hr>
   <section id="disqus_thread"></section>
   {% include disqus.html %}
   {% endif %}

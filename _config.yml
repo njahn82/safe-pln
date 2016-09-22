@@ -26,9 +26,9 @@ disqus:
   id:               "your-id"
 
 # URL
-url:                "https://njahn82.github.io/safe-pln"
+url:                "https://njahn82.github.io"
 #url:               "localhost:4000"
-baseurl:            ""
+baseurl:            "/safe-pln"
 
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -49,7 +49,7 @@ nav:
   - name:           "About"
     url:            "/about"
   - name:           "Collections"
-    url:            "/collections"  
+    url:            "/collections"
   - name:           "Partners"
     url:            "/partners"
   - name:           "Tags"

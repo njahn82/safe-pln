@@ -18,8 +18,8 @@ author:
   email:            info@safepln.org
 
 # Google-analytics
-google-analytics:
-  id:               ""
+# google-analytics:
+#  id:               ""
 
 # Disqus
 disqus:
